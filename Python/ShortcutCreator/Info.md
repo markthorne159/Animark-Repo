@@ -6,4 +6,5 @@ which can be accessed with the click of a button.
 
 There are two versions of the app. One is a GUI application and the other is a command line interface.
 The GUI application displays a list of your already created shortcuts each time you start it up and currently includes
-buttons to enable you to add or remove shortcuts. The command line version requires a little bit more interaction as it includes 
+buttons to enable you to add or remove shortcuts. The command line version requires a little bit more interaction as it includes
+commands that enable you to view a list of your current shortcuts, set a new shortcut by adding a "path"
