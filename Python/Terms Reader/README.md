@@ -10,3 +10,6 @@ As well as simple scans you can also grab anything the app outputs and write it 
 Using the app is easy. Simply click on the icon, wait for the app to boot and you're ready to go!
 An important note however is to make sure that the file you wish to scan is in the same directory as the app to ensure 
 the application can find and read the file.
+
+Currently the app can only read from text files with the ability to grab terms and conditions directly from a web page being
+added in the future.
