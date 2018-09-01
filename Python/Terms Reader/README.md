@@ -13,3 +13,13 @@ the application can find and read the file.
 
 Currently the app can only read from text files with the ability to grab terms and conditions directly from a web page being
 added in the future.
+
+Using the application.
+-----------------------
+
+
+Each time you open the app you'll be greeted by a small window which prompts you to type in the name of the file you want to scan.
+
+(Screenshot of intial window.)
+
+Clicking 'Set' will set your chosen file and open up the main window. The main window shows a list of each of the terms or words the app will search for, an entry box for you to declare a specific phrase or word to search for and an entry box for you to add your own words and phrases to the list provided.
