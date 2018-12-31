@@ -20,10 +20,9 @@ Using the application.
 
 Each time you open the app you'll be greeted by a small window which prompts you to type in the name of the file you want to scan.
 
-(Screenshot of intial window.)
 ![InitBox](https://puu.sh/CpIvR/56566fe203.png)
 
-Clicking 'Set' will set your chosen file and open up the main window. The main window shows a list of each of the terms or words the app will search for, an entry box for you to declare a specific phrase or word to search for and an entry box for you to add your own words and phrases to the list provided. There is also a small label above the 'Scan' button displaying the name of the file you set for the scan.
+Typing the name of your file into the empty box and clicking 'Set' will set your chosen file and open up the main window. The main window shows a list of each of the terms or words the app will search for, an entry box for you to declare a specific phrase or word to search for and an entry box for you to add your own words and phrases to the list provided. There is also a small label above the 'Scan' button displaying the name of the file you set for the scan.
 
 (Screenshot of main window)
 
