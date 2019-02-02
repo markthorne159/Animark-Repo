@@ -51,13 +51,47 @@ class Export_Func(bpy.types.Operator):
 		LocData = bpy.context.scene["LocA"]
 		NameData = bpy.context.scene["NameA"]
 		print(LocData)
-		print(bpy.types.Scene.Selection_bool)
 		#Create ExportPath string,combining object name,save location and "Selection" variable.
 		ExportPath = LocData + "\\" + NameData + bpy.context.scene["Type"]
 		print(ExportPath)
 		#Export the file.
 		bpy.ops.export_scene.fbx(filepath = ExportPath,use_selection = bpy.context.scene["Selection_bool"])
 		return{'FINISHED'}
+		
+#Switch filetype to export 'fbx'.		
+class Fbx_Switch(bpy.types.Operator):
+	bl_idname = 'fbx.switch'
+	bl_label = 'FBX switch'
+	bl_description = 'Switch filetype to FBX.'
+	bl_options = {"REGISTER","UNDO"}
+	
+	def execute(self,context):
+		bpy.context.scene["Type"] = ".fbx"
+		return{'FINISHED'}
+
+#Switch filetype to export 'obj'.
+class Obj_Switch(bpy.types.Operator):
+	bl_idname = 'obj.switch'
+	bl_label = 'Obj switch'
+	bl_description = 'Switch filetype to Obj.'
+	bl_options = {"REGISTER","UNDO"}
+	
+	def execute(self,context):
+		bpy.context.scene["Type"] = ".obj"
+		return{'FINISHED'}
+		
+#Switch filetype to export 'stl'.
+class Stl_Switch(bpy.types.Operator):
+	bl_idname = 'stl.switch'
+	bl_label = 'Stl switch'
+	bl_description = 'Switch filetype to Stl.'
+	bl_options = {"REGISTER","UNDO"}
+	
+	def execute(self,context):
+		bpy.context.scene["Type"] = ".stl"
+		return{'FINISHED'}
+	
+	
 	
 	
 	
@@ -85,11 +119,18 @@ class OneClickPanel(Panel):
 		layout.prop(scene,"Selection_bool",text="Selection")
 		row = layout.row()
 		row.label('Set filetype')
+		row = layout.row()
+		layout.operator("fbx.switch",text="Set FBX",icon="QUESTION")
+		layout.operator("obj.switch",text="Set OBJ",icon="QUESTION")
+		layout.operator("stl.switch",text="Set STL",icon="QUESTION")
 	
 def register():
 	bpy.utils.register_class(OneExport)
 	bpy.utils.register_class(Export_Func)
 	bpy.utils.register_class(OneClickPanel)
+	bpy.utils.register_class(Fbx_Switch)
+	bpy.utils.register_class(Obj_Switch)
+	bpy.utils.register_class(Stl_Switch)
 	#Create a boolean property to turn on or off.
 	#Also register boolean same as any other property.
 	bpy.types.Scene.Selection_bool
@@ -98,6 +139,9 @@ def unregister():
 	bpy.utils.unregister_class(OneExport)
 	bpy.utils.register_class(Export_Func)
 	bpy.utils.unregister_class(OneClickPanel)
+	bpy.utils.unregister_class(Fbx_Switch)
+	bpy.utils.unregister_class(Obj_Switch)
+	bpy.utils.unregister_class(Stl_Switch)
 	#Create a boolean property to turn on or off.
 	#Also unregister boolean same as any other property.
 	del bpy.types.Scene.Selection_bool
