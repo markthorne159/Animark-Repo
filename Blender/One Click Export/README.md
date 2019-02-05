@@ -8,3 +8,5 @@ Once the addon is installed pressing 'T' in object mode will open up the normal 
 
 (Options image)
 
+The first two buts are almost the most important ones. Clicking on the first one will open up a new window enabling you to set the destination you want the object to be exported to and what you want the file to be named. Clicking 'Ok' will then save these two details as their own custom property in Blender. The button below this is pretty self explanatory, clicking it will export the file to the chosen destination. The next option is a small checkbox, leaving this unchecked will cause everything in the scene to be exported when the 'Export' button is clicked. Alternatively clicking on the checkbox will mean that only the selected object gets exported.
+
