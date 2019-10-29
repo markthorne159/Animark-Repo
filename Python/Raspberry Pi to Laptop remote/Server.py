@@ -6,8 +6,8 @@ import subprocess
 class LaptopCapture():
 
     #Set self as host variable.
-    #Change this to '127.0.0.1', standard localhost (?)
-    Host = '192.168.0.15'
+    #Set this to devices own IP address.
+    Host = ''
     #Find devices IP to make it easier for remote to connect.
     DeviceIP = ''
     #Set unused port for connection
@@ -44,7 +44,7 @@ class LaptopCapture():
         Splits = Command.split(" ")
         print Splits
 
-        #If multiple commands then set other variables.
+        #If multiple commands are sent then set other variables.
         if len(Splits) > 0:
             self.Timer = int(Splits[0])
             print "Sleeping for: %d" % self.Timer
